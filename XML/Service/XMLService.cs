@@ -142,11 +142,26 @@ namespace XML.Service
                     switch (xmlReader.LocalName)
                     {
                         case "Patent":
+                            try
+                            {
                             entity = (Catalog)new XmlSerializer(typeof(Patent)).Deserialize(xmlReader);
+                            }
+                            catch (Exception e)
+                            {
+                                throw new Exception();
+                            }
                             break;
                         case "Newspaper":
+                            try
+                            {
                             entity = (Catalog)new XmlSerializer(typeof(Newspaper)).Deserialize(xmlReader);
+                            }
+                            catch (Exception e)
+                            {
+                                throw new Exception();
+                            }
                             break;
+                    
                         case "Book":
                             try
                             {
@@ -154,7 +169,7 @@ namespace XML.Service
                             }
                             catch (Exception e)
                             {
-                                Console.WriteLine(e);
+                                throw new Exception();
                             }
                             break;
                     }

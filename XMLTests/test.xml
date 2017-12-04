@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Library="Library 1" DateCreated="2017-11-22T18:26:14.376121+03:00" xmlns="http://XMLCreator.Catalog/1.0.0.0">
+
+<Book xmlns:bk="http://LibraryStorage.Book/1.0.0.0" ISBN="10" Description="Book number 3">
+  <Title>reeew</Title>
+  <Authors>
+    <Author>Victor</Author>
+  </Authors>
+  <City>Minsk</City>
+  <Publishing>dfgads</Publishing>
+  <CountPages>1545</CountPages>
+  <Annotation>qwssagsa</Annotation>
+</Book>
+<Book xmlns:bk="http://LibraryStorage.Book/1.0.0.0" ISBN="4" Description="Book number 4">
+  <Title>ewqfewrgergb</Title>
+  <Authors>
+    <Author>Victor</Author>
+    <Author>Oleg</Author>
+  </Authors>
+  <City>Minergergsk</City>
+  <Publishing>yepdhge</Publishing>
+  <CountPages>202</CountPages>
+  <Annotation>qdfdfsdfs</Annotation>
+</Book>
+<Book xmlns:bk="http://LibraryStorage.Book/1.0.0.0" ISBN="3" Description="Book number 3">
+  <Title>reeeawrgaww</Title>
+  <Authors>
+    <Author>Victor</Author>
+  </Authors>
+  <City>New-York</City>
+  <Publishing>ds</Publishing>
+  <CountPages>1000</CountPages>
+  <Annotation>qwertytyrejuetryjk</Annotation>
+</Book>
+<Book xmlns:bk="http://LibraryStorage.Book/1.0.0.0" ISBN="365461" Description="Book">
+  <Title>New Book</Title>
+  <Authors>
+    <Author>Victor</Author>
+  </Authors>
+  <City>Minsk</City>
+  <Publisher>EPAM</Publisher>
+  <NumberOfPages>0</NumberOfPages>
+  <Annotation>aaaaaaa</Annotation>
+</Book>
+</Catalog>

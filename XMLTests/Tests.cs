@@ -4,12 +4,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 using XML;
 using XML.Models;
 using XML.Service;
 
 namespace XMLTests
 {
+    [TestFixture]
     public class Tests
     {
 
@@ -17,10 +19,10 @@ namespace XMLTests
         [TestCase("", typeof(ArgumentException))]
         public void CreateRepositoryWithoutPath_Exception(string path, Type exception)
         {
-           Assert.Throws(exception, () => new XmlRepository(path));
+           Assert.Throws(exception, () => new XMLRepository(path));
         }
 
-        [TestCase("qwerty.xml", typeof(IOException))]
+        [TestCase("test.xml", typeof(IOException))]
         public void GetStreamToRepository_RepositoryNotExsist_Exception(string repositoryName, Type exception)
         {
             XMLRepository repository = new XMLRepository(repositoryName);
@@ -28,7 +30,7 @@ namespace XMLTests
         }
 
         //Should be created repository
-        [TestCase("")]
+        [TestCase("C:/Users/Viktar_Varanko/Source/Repos/Module06.BasicXML/XMLTests/test.xml")]
         public void GetStreamToRepository_ReturnStreamToRepository(string path)
         {
             XMLRepository repository = new XMLRepository(path);
@@ -37,7 +39,7 @@ namespace XMLTests
         }
 
         //Should be created repository
-        [TestCase("", null, typeof(ArgumentNullException))]
+        [TestCase("C:/Users/Viktar_Varanko/Source/Repos/Module06.BasicXML/XMLTests/test.xml", null, typeof(ArgumentNullException))]
         public void SaveDataInRepository_Exception(string path, Catalog catalog, Type exception)
         {
             XMLRepository repository = new XMLRepository(path);
@@ -46,11 +48,11 @@ namespace XMLTests
         [TestCase(null, null, typeof(IOException))]
         public void CreatingService_RepositoryNotFound_Exception(string filePath, Catalog catalog, Type exception)
         {
-            Assert.Throws(exception, () => new XmlService());
+            Assert.Throws(exception, () => new XMLService());
         }
 
         //Should be created repository
-        [TestCase("")]
+        [TestCase("C:/Users/Viktar_Varanko/Source/Repos/Module06.BasicXML/XMLTests/test.xml")]
         public void AddNewValueToRepository_SuccessAddedNewItem(string repositoryName)
         {
             XMLService service = new XMLService(repositoryName);
@@ -66,7 +68,7 @@ namespace XMLTests
         }
 
         //Should be created repository
-        [TestCase("", typeof(ArgumentNullException))]
+        [TestCase("C:/Users/Viktar_Varanko/Source/Repos/Module06.BasicXML/XMLTests/test.xml", typeof(ArgumentNullException))]
         public void AddNewValueToRepository_FailedAddedNewItem(string repositoryName, Type exception)
         {
             XMLService service = new XMLService(repositoryName);
