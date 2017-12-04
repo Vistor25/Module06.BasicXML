@@ -42,4 +42,14 @@
   <NumberOfPages>0</NumberOfPages>
   <Annotation>aaaaaaa</Annotation>
 </Book>
+<Book xmlns:bk="http://LibraryStorage.Book/1.0.0.0" ISBN="365461" Description="Book">
+  <Title>New Book</Title>
+  <Authors>
+    <Author>Victor</Author>
+  </Authors>
+  <City>Minsk</City>
+  <Publisher>EPAM</Publisher>
+  <NumberOfPages>0</NumberOfPages>
+  <Annotation>aaaaddhdhaaa</Annotation>
+</Book>
 </Catalog>
